@@ -132,6 +132,7 @@ body {
   padding: 15px;
   border-radius: 12px;
   overflow-y: auto;
+  border: none;
 }
 
 .sidebar-title {
