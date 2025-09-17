@@ -1,34 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food delivery3</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food Delivery - Settings</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <!-- NAVBAR -->
   <header class="navbar">
-    <div class="left">
+    <div class="navbar-left">
       <div class="logo">
-        <img src="Food del.png" alt="Logo">
+        <img src="Food del.png" alt="Food delivery logo" />
       </div>
+
       <div class="search">
-        <i class="fa fa-search"></i>
-        <input type="text" placeholder="Search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="text" placeholder="Search" aria-label="Search" />
       </div>
     </div>
+
     <nav class="menu">
       <a href="#">Restaurants</a>
       <a href="#">Deals</a>
       <a href="#">My orders</a>
-      <div class="notifications">
+
+      <div class="notifications" aria-hidden="true">
         <i class="fa fa-envelope"></i>
         <span class="badge">4</span>
       </div>
+
       <div class="profile">
-        <img src="avatar.jpg" alt="Profile">
+        <img src="avatar.jpg" alt="User avatar" />
       </div>
     </nav>
   </header>
@@ -43,81 +47,92 @@
           <li class="active">
             <i class="fa fa-user"></i>
             <div>
+              <span class="title">Account</span><br />
               <span class="subtitle">Personal information</span>
             </div>
           </li>
+
           <li>
             <i class="fa fa-map-marker-alt"></i>
             <div>
-              <span class="title">Address</span><br>
+              <span class="title">Address</span><br />
               <span class="subtitle">Shippings addresses</span>
             </div>
           </li>
+
           <li>
             <i class="fa fa-credit-card"></i>
             <div>
-              <span class="title">Payment method</span><br>
+              <span class="title">Payment method</span><br />
               <span class="subtitle">Connected credit cards</span>
             </div>
           </li>
+
           <li>
             <i class="fa fa-lock"></i>
             <div>
-              <span class="title">Security</span><br>
+              <span class="title">Security</span><br />
               <span class="subtitle">Password, 2FA</span>
             </div>
           </li>
         </ul>
       </aside>
 
-    <!-- CONTENT -->
-<section class="content">
-  <div class="content-header">
-    <h2>Account</h2>
-  </div>
-  <h3>Personal information</h3>
+      <!-- CONTENT -->
+      <section class="content" aria-labelledby="account-heading">
+        <div class="content-header">
+          <h2 id="account-heading">Account</h2>
+        </div>
+
+        <h3>Personal information</h3>
 
         <div class="profile-section">
-          <img src="avatar.jpg" alt="Avatar" class="avatar">
-          <button class="btn blue">Change</button>
-          <button class="btn">Remove</button>
+          <img src="avatar.jpg" alt="Avatar" class="avatar" />
+          <div class="profile-actions">
+            <button class="btn blue" type="button">Change</button>
+            <button class="btn" type="button">Remove</button>
+          </div>
         </div>
 
         <form>
           <div class="form-row">
             <div class="form-group">
-              <label>First name</label>
-              <input type="text" value="Jane">
+              <label for="first-name">First name</label>
+              <input id="first-name" type="text" value="Jane" />
             </div>
+
             <div class="form-group">
-              <label>Last name</label>
-              <input type="text" value="Robertson">
+              <label for="last-name">Last name</label>
+              <input id="last-name" type="text" value="Robertson" />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label>Email</label>
-              <input type="email" value="jane.robertson@example.com">
+              <label for="email">Email</label>
+              <input id="email" type="email" value="jane.robertson@example.com" />
             </div>
+
             <div class="form-group">
-              <label>Phone number</label>
-              <input type="tel" value="(217) 555-0113">
+              <label for="phone">Phone number</label>
+              <input id="phone" type="tel" value="(217) 555-0113" />
             </div>
           </div>
 
           <h3>Email notifications</h3>
+
           <div class="checkboxes">
-            <label><input type="checkbox" checked> New deals</label>
-            <label><input type="checkbox" checked> New restaurants</label>
-            <label><input type="checkbox" checked> Order statuses</label>
-            <label><input type="checkbox" checked> Password changes</label>
-            <label><input type="checkbox" checked> Special offers</label>
-            <label><input type="checkbox" checked> Newsletter</label>
+            <label><input type="checkbox" checked /> New deals</label>
+            <label><input type="checkbox" checked /> Password changes</label>
+            <label><input type="checkbox" checked /> New restaurants</label>
+            <label><input type="checkbox" checked /> Special offers</label>
+            <label><input type="checkbox" checked /> Order statuses</label>
+            <label><input type="checkbox" checked /> Newsletter</label>
           </div>
 
           <div class="form-actions">
             <button type="button" class="btn red">Log out</button>
+
             <div class="right">
               <button type="reset" class="btn">Discard changes</button>
               <button type="submit" class="btn blue">Save changes</button>
