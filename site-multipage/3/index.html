@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food delivery3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="left">
+      <div class="logo">
+        <img src="Food del.png" alt="Logo">
+      </div>
+      <div class="search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Search">
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="#">Restaurants</a>
+      <a href="#">Deals</a>
+      <a href="#">My orders</a>
+      <div class="notifications">
+        <i class="fa fa-envelope"></i>
+        <span class="badge">4</span>
+      </div>
+      <div class="profile">
+        <img src="avatar.jpg" alt="Profile">
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="settings-wrapper">
+    <div class="settings-container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Settings</h2>
+        <ul>
+          <li class="active">
+            <i class="fa fa-user"></i>
+            <div>
+              <span class="subtitle">Personal information</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-map-marker-alt"></i>
+            <div>
+              <span class="title">Address</span><br>
+              <span class="subtitle">Shippings addresses</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-credit-card"></i>
+            <div>
+              <span class="title">Payment method</span><br>
+              <span class="subtitle">Connected credit cards</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa fa-lock"></i>
+            <div>
+              <span class="title">Security</span><br>
+              <span class="subtitle">Password, 2FA</span>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+    <!-- CONTENT -->
+<section class="content">
+  <div class="content-header">
+    <h2>Account</h2>
+  </div>
+  <h3>Personal information</h3>
+
+        <div class="profile-section">
+          <img src="avatar.jpg" alt="Avatar" class="avatar">
+          <button class="btn blue">Change</button>
+          <button class="btn">Remove</button>
+        </div>
+
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First name</label>
+              <input type="text" value="Jane">
+            </div>
+            <div class="form-group">
+              <label>Last name</label>
+              <input type="text" value="Robertson">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" value="jane.robertson@example.com">
+            </div>
+            <div class="form-group">
+              <label>Phone number</label>
+              <input type="tel" value="(217) 555-0113">
+            </div>
+          </div>
+
+          <h3>Email notifications</h3>
+          <div class="checkboxes">
+            <label><input type="checkbox" checked> New deals</label>
+            <label><input type="checkbox" checked> New restaurants</label>
+            <label><input type="checkbox" checked> Order statuses</label>
+            <label><input type="checkbox" checked> Password changes</label>
+            <label><input type="checkbox" checked> Special offers</label>
+            <label><input type="checkbox" checked> Newsletter</label>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn red">Log out</button>
+            <div class="right">
+              <button type="reset" class="btn">Discard changes</button>
+              <button type="submit" class="btn blue">Save changes</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

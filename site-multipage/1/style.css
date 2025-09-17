@@ -1,0 +1,286 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+/* Layout principal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+/* ---------------- Stânga ---------------- */
+.left {
+  flex: 1 1 400px;
+  background: white;
+  padding: 30px 30px 40px; 
+}
+
+
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-left: 90px;
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-left: 90px;
+  margin-top: 40px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  margin-left: 86.5px;
+}
+
+.login-box {
+  max-width: 400px;
+  margin: 40px auto 0; 
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: gray;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-row label {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #3b56ff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2a3bd6;
+}
+
+.forgot {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #3b56ff;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+
+.signup {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+.right {
+  flex: 1 1 400px;
+  background: #4E60FF;
+  color: white;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.images-wrapper img {
+  position: absolute;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#com {
+  top: 3%;
+  left: 0.1%;
+  width: 63%;  
+}
+
+#rol {
+  top: 8%;
+  right: 1%;
+  width: 60%; 
+}
+
+#nigiri {
+  bottom: 23%;
+  left: 7%;   
+  width: 96%; }
+
+/* Text suprapus */
+.right h2 {
+  position: absolute;
+  bottom: 18%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  font-size: 1.4rem; 
+  text-align: center;
+}
+
+#Lorem {
+  position: absolute;
+  bottom: 10%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  text-align: center;
+  font-size: 12px; 
+}
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 5%; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+}
+
+.dot.active {
+  background: #ffffff;
+}
+
+/* ---------------- Responsive ---------------- */
+
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .logo-login h1 {
+    font-size: 1.8rem;
+  }
+
+  .images-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .images-wrapper img {
+    position: static;
+    width: 100%;
+  }
+
+  .right h2, #Lorem, .dots {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .right h2 {
+    font-size: 1.3rem;
+  }
+
+  #Lorem {
+    font-size: 13px;
+    max-width: 90%;
+  }
+
+  .dots {
+    margin-top: 8px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .logo-login {
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 45px;
+  }
+
+  .logo-login h1 {
+    font-size: 1.5rem;
+  }
+
+  .right h2 {
+    font-size: 1.1rem;
+  }
+
+  #Lorem {
+    font-size: 11px;
+  }
+
+  .dots {
+    margin-top: 6px;
+  }
+}
