@@ -132,7 +132,6 @@ body {
   padding: 15px;
   border-radius: 12px;
   overflow-y: auto;
-  border: none; /* scos border */
 }
 
 .sidebar-title {
